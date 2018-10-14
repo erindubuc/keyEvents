@@ -3,29 +3,85 @@
     <head>
     <meta language="en" charset="UTF-8">
     <title>Key Events Fun</title>
-    <script src="./scripts.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <style>
-    .hidden {
-        display: none;
-        }
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 20px;
+            }
+        button {
+            margin: 0 auto; 
+            display: block;
+            }
+        img {
+            height: 100%;
+            width: 100%;
+            }
+        .hidden {
+            display: none;
+            }
+        .w3-third {
+            text-align: center;
+            }
+
     </style>
     </head>
 <body>
-    <header>
-    <h1>Funny Faces!!</h1>
-    </header>
-    <div class="container">
-    
-    <img src="./giraffe.png" id="giraffe" />
-    <img src="./anteater.png" id="anteater" class="hidden" />
-    <img src="./lion-male.png" id="lion" class="hidden" />
-    <img src=" ./gorilla.png" id="gorilla" class="hidden" />
-    <img src="./lemur.png" id="lemur" class="hidden" />
-    
-    
+    <div class="w3-container w3-padding">
+        <h1 style="text-align: center; font-family: 'Josefin Sans', sans-serif;" id="addBorder">Let's Have Some Fun!</h1>
+        <button id="enter" style="margin-top: 25px; margin-bottom: 25px;">Press ENTER!</button>    
     </div>
+    
+    
+    <!--create row for images to display in-->
+    <div class="w3-row-padding w3-padding w3-center" style="text-align: center;">
+        
+        <!--create columns to display different events-->
+        <!--press g key-->
+        <div class="w3-third">
+            <p>Press 'g' to grin at a gorilla...</p>
+            <img src="./giraffe.png" id="giraffe" />
+            <img src=" ./gorilla.png" id="gorilla" class="hidden" />
+        </div>
+            
+        <!--next column press l key-->
+        <div class="w3-third">
+            <p>Press 'l' to laugh at a lemur!</p>
+            <img src="./lemur.png" id="lemur" class="hidden" /> 
+        </div>
 
-
-
+        <!--next column press a key-->
+        <div class="w3-third">
+            <img src="./anteater.png" id="anteater" />
+            <p id="hideMe">Press 'a' for anteater antics...</p>
+            <p id="fontSize" class="hidden">Sllllluuuuuurrrrrppp!</p>
+        </div>
+    </div>
+ 
+    <!--new row-->
+    <div class="w3-row w3-padding w3-center">
+        
+        <!--column press s key-->
+        <div class="w3-half w3-padding">
+            <img src="./lion-male.png" class="hidden" id="lion" />
+            <p>Press 's' for a smooch!</p>
+            
+        </div>
+        
+        <!--next column press w key-->
+        <div id="parent" class="w3-half w3-padding">
+            <p></p>
+            <p id="child">Let's wrap this up, shall we?! </br>
+            Press 'w'...</p>
+            <iframe id="video" class="hidden" width="600" height="450" src="https://www.youtube.com/embed/HVMWobfc5sc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+ 
+    <script src="./scripts.js"></script>
 </body>
 </html>
